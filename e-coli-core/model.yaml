@@ -1,0 +1,11 @@
+name: e_coli_core
+biomass: BIOMASS_Ecoli_core_w_GAM
+default_flux_limit: 1000.0
+compounds:
+- include: compounds.yaml
+reactions:
+- include: reactions.yaml
+media:
+- include: medium.yaml
+limits:
+- include: limits.yaml

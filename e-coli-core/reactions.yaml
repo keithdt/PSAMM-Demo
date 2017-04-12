@@ -1,0 +1,379 @@
+- id: ACALD
+  name: Acetaldehyde dehydrogenase (acetylating)
+  genes: b0351 or b1241
+  equation: '|acald_c| + |coa_c| + |nad_c| <=> |accoa_c| + |h_c| + |nadh_c|'
+  subsystem: Pyruvate Metabolism
+- id: ACALDt
+  name: Acetaldehyde reversible transport
+  genes: s0001
+  equation: '|acald_e| <=> |acald_c|'
+  subsystem: Transport, Extracellular
+- id: ACKr
+  name: Acetate kinase
+  genes: b3115 or b2296 or b1849
+  equation: '|ac_c| + |atp_c| <=> |actp_c| + |adp_c|'
+  subsystem: Pyruvate Metabolism
+- id: ACONTa
+  name: Aconitase (half-reaction A, Citrate hydro-lyase)
+  genes: b0118 or b1276
+  equation: '|cit_c| <=> |h2o_c| + |acon_C_c|'
+  subsystem: Citric Acid Cycle
+- id: ACONTb
+  name: Aconitase (half-reaction B, Isocitrate hydro-lyase)
+  genes: b0118 or b1276
+  equation: '|h2o_c| + |acon_C_c| <=> |icit_c|'
+  subsystem: Citric Acid Cycle
+- id: ACt2r
+  name: Acetate reversible transport via proton symport
+  equation: '|h_e| + |ac_e| <=> |ac_c| + |h_c|'
+  subsystem: Transport, Extracellular
+- id: ADK1
+  name: Adenylate kinase
+  genes: b0474
+  equation: '|amp_c| + |atp_c| <=> (2.0) |adp_c|'
+  subsystem: Oxidative Phosphorylation
+- id: AKGDH
+  name: 2-Oxogluterate dehydrogenase
+  genes: b0116 and b0726 and b0727
+  equation: '|akg_c| + |coa_c| + |nad_c| <=> |nadh_c| + |succoa_c| + |co2_c|'
+  subsystem: Citric Acid Cycle
+- id: AKGt2r
+  name: 2 oxoglutarate reversible transport via symport
+  genes: b2587
+  equation: '|h_e| + |akg_e| <=> |akg_c| + |h_c|'
+  subsystem: Transport, Extracellular
+- id: ALCD2x
+  name: Alcohol dehydrogenase (ethanol)
+  genes: b0356 or b1478 or b1241
+  equation: '|etoh_c| + |nad_c| <=> |acald_c| + |nadh_c| + |h_c|'
+  subsystem: Pyruvate Metabolism
+- id: ATPM
+  name: ATP maintenance requirement
+  equation: '|h2o_c| + |atp_c| <=> |pi_c| + |adp_c| + |h_c|'
+  subsystem: Oxidative Phosphorylation
+- id: ATPS4r
+  name: ATP synthase (four protons for one ATP)
+  genes: (b3736 and b3737 and b3738 and b3731 and b3732 and b3733 and b3734 and b3735)
+    or (b3736 and b3737 and b3738 and b3731 and b3732 and b3733 and b3734 and b3735
+    and b3739)
+  equation: (4.0) |h_e| + |adp_c| + |pi_c| <=> |h2o_c| + |atp_c| + (3.0) |h_c|
+  subsystem: Oxidative Phosphorylation
+- id: BIOMASS_Ecoli_core_w_GAM
+  name: Biomass Objective Function with GAM
+  equation: (59.81) |h2o_c| + (4.9414) |glu__L_c| + (0.129) |g3p_c| + (0.361) |e4p_c|
+    + (0.8977) |r5p_c| + (59.81) |atp_c| + (0.0709) |f6p_c| + (2.8328) |pyr_c| +
+    (1.7867) |oaa_c| + (0.205) |g6p_c| + (3.7478) |accoa_c| + (3.547) |nad_c| + (1.496)
+    |3pg_c| + (0.5191) |pep_c| + (0.2557) |gln__L_c| + (13.0279) |nadph_c| <=> (59.81)
+    |adp_c| + (59.81) |h_c| + (3.7478) |coa_c| + (3.547) |nadh_c| + (4.1182) |akg_c|
+    + (13.0279) |nadp_c| + (59.81) |pi_c|
+  subsystem: Biomass and maintenance functions
+- id: CO2t
+  name: CO2 transporter via diffusion
+  genes: s0001
+  equation: '|co2_e| <=> |co2_c|'
+  subsystem: Transport, Extracellular
+- id: CS
+  name: Citrate synthase
+  genes: b0720
+  equation: '|h2o_c| + |oaa_c| + |accoa_c| <=> |cit_c| + |coa_c| + |h_c|'
+  subsystem: Citric Acid Cycle
+- id: CYTBD
+  name: 'Cytochrome oxidase bd (ubiquinol-8: 2 protons)'
+  genes: (b0978 and b0979) or (b0733 and b0734)
+  equation: (0.5) |o2_c| + |q8h2_c| + (2.0) |h_c| <=> |h2o_c| + (2.0) |h_e| + |q8_c|
+  subsystem: Oxidative Phosphorylation
+- id: D_LACt2
+  name: D lactate transport via proton symport
+  genes: b2975 or b3603
+  equation: '|lac__D_e| + |h_e| <=> |lac__D_c| + |h_c|'
+  subsystem: Transport, Extracellular
+- id: ENO
+  name: Enolase
+  genes: b2779
+  equation: '|2pg_c| <=> |pep_c| + |h2o_c|'
+  subsystem: Glycolysis/Gluconeogenesis
+- id: ETOHt2r
+  name: ETOHt2r
+  equation: '|etoh_e| + |h_e| <=> |h_c| + |etoh_c|'
+  subsystem: Transport, Extracellular
+- id: FBA
+  name: Fructose-bisphosphate aldolase
+  genes: b2097 or b1773 or b2925
+  equation: '|fdp_c| <=> |dhap_c| + |g3p_c|'
+  subsystem: Glycolysis/Gluconeogenesis
+- id: FBP
+  name: Fructose-bisphosphatase
+  genes: b3925 or b4232
+  equation: '|h2o_c| + |fdp_c| <=> |pi_c| + |f6p_c|'
+  subsystem: Glycolysis/Gluconeogenesis
+- id: FORt2
+  name: Formate transport in via proton symport
+  genes: b0904 or b2492
+  equation: '|for_e| + |h_e| <=> |h_c| + |for_c|'
+  subsystem: Transport, Extracellular
+- id: FORti
+  name: Formate transport via diffusion
+  genes: b0904 or b2492
+  equation: '|for_c| <=> |for_e|'
+  subsystem: Transport, Extracellular
+- id: FRD7
+  name: Fumarate reductase
+  genes: b4151 and b4152 and b4153 and b4154
+  equation: '|q8h2_c| + |fum_c| <=> |succ_c| + |q8_c|'
+  subsystem: Oxidative Phosphorylation
+- id: FRUpts2
+  name: Fructose transport via PEP:Pyr PTS (f6p generating)
+  genes: b1817 and b1818 and b1819 and b2415 and b2416
+  equation: '|pep_c| + |fru_e| <=> |pyr_c| + |f6p_c|'
+  subsystem: Transport, Extracellular
+- id: FUM
+  name: Fumarase
+  genes: b1612 or b4122 or b1611
+  equation: '|h2o_c| + |fum_c| <=> |mal__L_c|'
+  subsystem: Citric Acid Cycle
+- id: FUMt2_2
+  name: Fumarate transport via proton symport (2 H)
+  genes: b3528
+  equation: (2.0) |h_e| + |fum_e| <=> |fum_c| + (2.0) |h_c|
+  subsystem: Transport, Extracellular
+- id: G6PDH2r
+  name: Glucose 6-phosphate dehydrogenase
+  genes: b1852
+  equation: '|g6p_c| + |nadp_c| <=> |nadph_c| + |6pgl_c| + |h_c|'
+  subsystem: Pentose Phosphate Pathway
+- id: GAPD
+  name: Glyceraldehyde-3-phosphate dehydrogenase
+  genes: b1779
+  equation: '|nad_c| + |g3p_c| + |pi_c| <=> |nadh_c| + |h_c| + |13dpg_c|'
+  subsystem: Glycolysis/Gluconeogenesis
+- id: GLCpts
+  name: D-glucose transport via PEP:Pyr PTS
+  genes: (b2417 and b1101 and b2415 and b2416) or (b1817 and b1818 and b1819 and
+    b2415 and b2416) or (b2417 and b1621 and b2415 and b2416)
+  equation: '|pep_c| + |glc__D_e| <=> |pyr_c| + |g6p_c|'
+  subsystem: Transport, Extracellular
+- id: GLNS
+  name: Glutamine synthetase
+  genes: b3870 or b1297
+  equation: '|atp_c| + |glu__L_c| + |nh4_c| <=> |h_c| + |adp_c| + |pi_c| + |gln__L_c|'
+  subsystem: Glutamate Metabolism
+- id: GLNabc
+  name: GLNabc
+  genes: b0811 and b0810 and b0809
+  equation: '|h2o_c| + |atp_c| + |gln__L_e| <=> |h_c| + |adp_c| + |pi_c| + |gln__L_c|'
+  subsystem: Transport, Extracellular
+- id: GLUDy
+  name: Glutamate dehydrogenase (NADP)
+  genes: b1761
+  equation: '|h2o_c| + |nadp_c| + |glu__L_c| <=> |akg_c| + |nadph_c| + |h_c| + |nh4_c|'
+  subsystem: Glutamate Metabolism
+- id: GLUN
+  name: Glutaminase
+  genes: b1812 or b0485 or b1524
+  equation: '|h2o_c| + |gln__L_c| <=> |glu__L_c| + |nh4_c|'
+  subsystem: Glutamate Metabolism
+- id: GLUSy
+  name: Glutamate synthase (NADPH)
+  genes: b3212 and b3213
+  equation: '|akg_c| + |nadph_c| + |h_c| + |gln__L_c| <=> |nadp_c| + (2.0) |glu__L_c|'
+  subsystem: Glutamate Metabolism
+- id: GLUt2r
+  name: L glutamate transport via proton symport  reversible
+  genes: b4077
+  equation: '|h_e| + |glu__L_e| <=> |glu__L_c| + |h_c|'
+  subsystem: Transport, Extracellular
+- id: GND
+  name: Phosphogluconate dehydrogenase
+  genes: b2029
+  equation: '|6pgc_c| + |nadp_c| <=> |co2_c| + |nadph_c| + |ru5p__D_c|'
+  subsystem: Pentose Phosphate Pathway
+- id: H2Ot
+  name: H2O transport via diffusion
+  genes: b0875 or s0001
+  equation: '|h2o_e| <=> |h2o_c|'
+  subsystem: Transport, Extracellular
+- id: ICDHyr
+  name: Isocitrate dehydrogenase (NADP)
+  genes: b1136
+  equation: '|icit_c| + |nadp_c| <=> |co2_c| + |akg_c| + |nadph_c|'
+  subsystem: Citric Acid Cycle
+- id: ICL
+  name: Isocitrate lyase
+  genes: b4015
+  equation: '|icit_c| <=> |succ_c| + |glx_c|'
+  subsystem: Anaplerotic reactions
+- id: LDH_D
+  name: D-lactate dehydrogenase
+  genes: b2133 or b1380
+  equation: '|lac__D_c| + |nad_c| <=> |pyr_c| + |nadh_c| + |h_c|'
+  subsystem: Pyruvate Metabolism
+- id: MALS
+  name: Malate synthase
+  genes: b4014 or b2976
+  equation: '|h2o_c| + |accoa_c| + |glx_c| <=> |mal__L_c| + |coa_c| + |h_c|'
+  subsystem: Anaplerotic reactions
+- id: MALt2_2
+  name: Malate transport via proton symport (2 H)
+  genes: b3528
+  equation: (2.0) |h_e| + |mal__L_e| <=> |mal__L_c| + (2.0) |h_c|
+  subsystem: Transport, Extracellular
+- id: MDH
+  name: Malate dehydrogenase
+  genes: b3236
+  equation: '|nad_c| + |mal__L_c| <=> |nadh_c| + |h_c| + |oaa_c|'
+  subsystem: Citric Acid Cycle
+- id: ME1
+  name: Malic enzyme (NAD)
+  genes: b1479
+  equation: '|mal__L_c| + |nad_c| <=> |pyr_c| + |nadh_c| + |co2_c|'
+  subsystem: Anaplerotic reactions
+- id: ME2
+  name: Malic enzyme (NADP)
+  genes: b2463
+  equation: '|nadp_c| + |mal__L_c| <=> |co2_c| + |pyr_c| + |nadph_c|'
+  subsystem: Anaplerotic reactions
+- id: NADH16
+  name: NADH dehydrogenase (ubiquinone-8 & 3 protons)
+  genes: b2276 and b2277 and b2278 and b2279 and b2280 and b2281 and b2282 and b2283
+    and b2284 and b2285 and b2286 and b2287 and b2288
+  equation: (4.0) |h_c| + |nadh_c| + |q8_c| <=> |q8h2_c| + (3.0) |h_e| + |nad_c|
+  subsystem: Oxidative Phosphorylation
+- id: NADTRHD
+  name: NAD transhydrogenase
+  genes: b3962 or (b1602 and b1603)
+  equation: '|nadph_c| + |nad_c| <=> |nadp_c| + |nadh_c|'
+  subsystem: Oxidative Phosphorylation
+- id: NH4t
+  name: Ammonia reversible transport
+  genes: s0001 or b0451
+  equation: '|nh4_e| <=> |nh4_c|'
+  subsystem: Inorganic Ion Transport and Metabolism
+- id: O2t
+  name: 'O2 transport  diffusion '
+  genes: s0001
+  equation: '|o2_e| <=> |o2_c|'
+  subsystem: Transport, Extracellular
+- id: PDH
+  name: Pyruvate dehydrogenase
+  genes: b0114 and b0115 and b0116
+  equation: '|pyr_c| + |coa_c| + |nad_c| <=> |nadh_c| + |accoa_c| + |co2_c|'
+  subsystem: Glycolysis/Gluconeogenesis
+- id: PFK
+  name: Phosphofructokinase
+  genes: b3916 or b1723
+  equation: '|atp_c| + |f6p_c| <=> |fdp_c| + |h_c| + |adp_c|'
+  subsystem: Glycolysis/Gluconeogenesis
+- id: PFL
+  name: Pyruvate formate lyase
+  genes: (b0902 and b0903 and b2579) or (b0902 and b0903) or (b0902 and b3114) or
+    (b3951 and b3952)
+  equation: '|pyr_c| + |coa_c| <=> |for_c| + |accoa_c|'
+  subsystem: Pyruvate Metabolism
+- id: PGI
+  name: Glucose-6-phosphate isomerase
+  genes: b4025
+  equation: '|g6p_c| <=> |f6p_c|'
+  subsystem: Glycolysis/Gluconeogenesis
+- id: PGK
+  name: Phosphoglycerate kinase
+  genes: b2926
+  equation: '|atp_c| + |3pg_c| <=> |adp_c| + |13dpg_c|'
+  subsystem: Glycolysis/Gluconeogenesis
+- id: PGL
+  name: 6-phosphogluconolactonase
+  genes: b0767
+  equation: '|h2o_c| + |6pgl_c| <=> |6pgc_c| + |h_c|'
+  subsystem: Pentose Phosphate Pathway
+- id: PGM
+  name: Phosphoglycerate mutase
+  genes: b3612 or b4395 or b0755
+  equation: '|2pg_c| <=> |3pg_c|'
+  subsystem: Glycolysis/Gluconeogenesis
+- id: PIt2r
+  name: Phosphate reversible transport via symport
+  genes: b2987 or b3493
+  equation: '|h_e| + |pi_e| <=> |pi_c| + |h_c|'
+  subsystem: Inorganic Ion Transport and Metabolism
+- id: PPC
+  name: Phosphoenolpyruvate carboxylase
+  genes: b3956
+  equation: '|h2o_c| + |co2_c| + |pep_c| <=> |h_c| + |oaa_c| + |pi_c|'
+  subsystem: Anaplerotic reactions
+- id: PPCK
+  name: Phosphoenolpyruvate carboxykinase
+  genes: b3403
+  equation: '|oaa_c| + |atp_c| <=> |pep_c| + |co2_c| + |adp_c|'
+  subsystem: Anaplerotic reactions
+- id: PPS
+  name: Phosphoenolpyruvate synthase
+  genes: b1702
+  equation: '|h2o_c| + |atp_c| + |pyr_c| <=> |pep_c| + |amp_c| + |pi_c| + (2.0) |h_c|'
+  subsystem: Glycolysis/Gluconeogenesis
+- id: PTAr
+  name: Phosphotransacetylase
+  genes: b2297 or b2458
+  equation: '|pi_c| + |accoa_c| <=> |coa_c| + |actp_c|'
+  subsystem: Pyruvate Metabolism
+- id: PYK
+  name: Pyruvate kinase
+  genes: b1854 or b1676
+  equation: '|pep_c| + |h_c| + |adp_c| <=> |pyr_c| + |atp_c|'
+  subsystem: Glycolysis/Gluconeogenesis
+- id: PYRt2
+  name: Pyruvate transport in via proton symport
+  equation: '|h_e| + |pyr_e| <=> |pyr_c| + |h_c|'
+  subsystem: Transport, Extracellular
+- id: RPE
+  name: Ribulose 5-phosphate 3-epimerase
+  genes: b3386 or b4301
+  equation: '|ru5p__D_c| <=> |xu5p__D_c|'
+  subsystem: Pentose Phosphate Pathway
+- id: RPI
+  name: Ribose-5-phosphate isomerase
+  genes: b2914 or b4090
+  equation: '|r5p_c| <=> |ru5p__D_c|'
+  subsystem: Pentose Phosphate Pathway
+- id: SUCCt2_2
+  name: Succinate transport via proton symport (2 H)
+  genes: b3528
+  equation: (2.0) |h_e| + |succ_e| <=> |succ_c| + (2.0) |h_c|
+  subsystem: Transport, Extracellular
+- id: SUCCt3
+  name: Succinate transport out via proton antiport
+  equation: '|succ_c| + |h_e| <=> |succ_e| + |h_c|'
+  subsystem: Transport, Extracellular
+- id: SUCDi
+  name: Succinate dehydrogenase (irreversible)
+  genes: b0721 and b0722 and b0723 and b0724
+  equation: '|succ_c| + |q8_c| <=> |q8h2_c| + |fum_c|'
+  subsystem: Oxidative Phosphorylation
+- id: SUCOAS
+  name: Succinyl-CoA synthetase (ADP-forming)
+  genes: b0728 and b0729
+  equation: '|atp_c| + |succ_c| + |coa_c| <=> |succoa_c| + |adp_c| + |pi_c|'
+  subsystem: Citric Acid Cycle
+- id: TALA
+  name: Transaldolase
+  genes: b2464 or b0008
+  equation: '|g3p_c| + |s7p_c| <=> |e4p_c| + |f6p_c|'
+  subsystem: Pentose Phosphate Pathway
+- id: THD2
+  name: NAD(P) transhydrogenase
+  genes: b1602 and b1603
+  equation: '|nadp_c| + (2.0) |h_e| + |nadh_c| <=> |nadph_c| + (2.0) |h_c| + |nad_c|'
+  subsystem: Oxidative Phosphorylation
+- id: TKT1
+  name: Transketolase
+  genes: b2935 or b2465
+  equation: '|r5p_c| + |xu5p__D_c| <=> |g3p_c| + |s7p_c|'
+  subsystem: Pentose Phosphate Pathway
+- id: TKT2
+  name: Transketolase
+  genes: b2935 or b2465
+  equation: '|e4p_c| + |xu5p__D_c| <=> |g3p_c| + |f6p_c|'
+  subsystem: Pentose Phosphate Pathway
+- id: TPI
+  name: Triose-phosphate isomerase
+  genes: b3919
+  equation: '|dhap_c| <=> |g3p_c|'
+  subsystem: Glycolysis/Gluconeogenesis
