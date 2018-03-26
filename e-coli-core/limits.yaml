@@ -1,7 +1,8 @@
 - reaction: AKGDH
   lower: 0.0
 - reaction: ATPM
-  lower: 8.39
+  lower: 0.0
+  upper: 0.0
 - reaction: BIOMASS_Ecoli_core_w_GAM
   lower: 0.0
 - reaction: CS
