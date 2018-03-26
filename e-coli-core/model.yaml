@@ -5,7 +5,7 @@ compounds:
 - include: compounds.yaml
 reactions:
 - include: reactions.yaml
-media:
+exchange:
 - include: medium.yaml
 limits:
 - include: limits.yaml
