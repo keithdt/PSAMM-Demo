@@ -6,6 +6,6 @@ compounds:
 reactions:
 - include: reactions.yaml
 exchange:
-- include: medium.yaml
+- include: exchange.yaml
 limits:
 - include: limits.yaml
